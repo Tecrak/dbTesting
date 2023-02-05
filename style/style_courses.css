@@ -1,0 +1,125 @@
+header {
+    height: 100px;
+    background: none;
+}
+.navigation {
+    position: relative;
+    background: whitesmoke;
+    width: 100%;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(45deg, whitesmoke 50%, white 50%);
+    margin: 0px 0px 15px 0px;
+    padding: 5px 0px 0px 0px;
+}
+.video_container {
+    /* width:900px; 
+    height:415px; */
+    position: relative;
+}
+.video_container > video {
+    width:100%; 
+    height:100%;
+}
+.skill_quality {
+    animation: 1s skillGrowth ease;
+    height: 10px;
+}
+@keyframes skillGrowth {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 300px;
+    }
+}
+.text_container {
+    margin: 0;
+    padding: 0px;
+}
+.text_container > h2 {
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.text_container > p {
+    font-size: 22px;
+    width: 500px;
+} 
+.author_score {
+    display: flex;
+    align-items: center;
+}
+.stars {
+    position: relative;
+    left:5px;
+}
+.checked {
+    color:rgb(255, 227, 65);
+    font-size: 25px;
+}
+.author_name {
+    font-weight: bold;
+    margin: 0px 0px 5px 0px;
+    padding: 0;
+}
+.authors_ebalo {
+    width: 55px;
+}
+.author_exp {
+    margin: 5px 0px 15px 0px;
+    padding: 0;
+}
+.upgrade_skills {
+    position: relative;
+    top:10px;
+    margin: 10px 0px 50px 0px;
+}
+.skill {
+    margin-top:13px;
+    font-size: 19px;
+}
+.upgrade_expect {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 23px;
+}
+.skill > p {
+    margin: 0;
+    padding: 0;
+    font-weight: 0;
+}
+.Evaluate_buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.ButtonEvaluate {
+    width: 155px;
+    height: 55px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    top:10px;
+    transition: 0.2s;
+    border: none;
+    box-shadow: 0px 0px 2px 2px rgb(255, 129, 33);
+    /* border:1px rgb(255, 186, 59) solid; */
+}
+.ButtonEvaluate:hover {
+    /* border: 0px rgb(255, 186, 59) solid; */
+    /* background: red; */
+    /* box-shadow: 0px 0px 4px 3px rgb(255, 202, 103); */
+    /* box-shadow: 0px 0px 5px 2px rgb(255, 129, 33); */
+    box-shadow: none;
+    background:rgb(255, 129, 33);
+    color:White;
+    cursor:pointer;
+    transform: scale(1.02);
+}
+/* ------------------------VIDEOPLAYER----------- */

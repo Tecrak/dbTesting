@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style_adaptation.css">
+    <script src="/libs/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <link rel="icon" type="image/x-icon" href="fav/fav.ico">
+    <script src="https://kit.fontawesome.com/ab3a47a664.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <title>HotBeans</title>
+</head>
+<body>
+    <div id="modal_background">
+        <div id="modal_window">
+            <div id="closer" onclick="closer()"></div>
+            <form action="db.php" method="post" id="form">
+                <h3>Please enter information</h3>
+                <div class="form_block">
+                    <label for="role">Choose your role</label>
+                    <select name="roles" id="role">
+                        <option value="">----Choose role----</option>
+                        <option value="Web_designer">Web Designer</option>
+                        <option value="Scripter">Scripter</option>
+                        <option value="Web_developer">Web developer</option>
+                    </select>
+                </div>
+                <div class="form_block">
+                    <label for="First_Name">Enter your name:</label>
+                    <input type="text" name="first_name" id="name" required>
+                    <span class="required">*</span>
+                </div>
+                <div class="form_block">
+                    <label for="Surname">Enter your surname:</label>
+                    <input type="text" name="surname" id="surname" required>
+                    <span class="required">*</span>
+                </div>
+                <div class="form_block">
+                    <label for="Email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <span class="required">*</span>
+                </div>
+                <div class="form_block">
+                    <label for="Birth">Date of birth</label>
+                    <input type="date" name="birth" id="birth" required>
+                    <span class="required">*</span>
+                </div>
+                <div class="form_block">
+                    <label for="CV">CV</label>
+                    <input type="file" name="cv" id="CV" accept=".doc, .docx, .xml, .odt ">
+                </div>
+                <p onclick="skillsOpen()" id="skillRequest" for="skillRequest">Evaluate your skills<span id="skillClose" class="fa fa-arrow-right"></p></label>
+                <div class="form_block closed" id="skillsOpenBlock">
+                    <ul id="skillEvaluate">
+                        <li>
+                            <label for="HTMLS">HTML</label>
+                            <input type="range" min="0" max="100" step="10" value="0" name="htmls" required>
+                        </li>
+                        <li>
+                            <label for="CSSS">CSS</label>
+                            <input type="range" class="SkillI" min="0" max="100" step="10" value="0" name="csss" required>
+                        </li>
+                        <li>
+                            <label for="JSS">Js</label>
+                            <input type="range" class="SkillI" min="0" max="100" step="10" value="0" name="jss" required>
+                        </li>
+                        <li>
+                            <label for="PHPS">PHP</label>
+                            <input type="range" class="SkillI" min="0" max="100" step="10" value="0" name="phps" required>
+                        </li>
+                        <li>
+                            <label for="MySQLS">MySQL</label>
+                            <input type="range" class="SkillI" min="0" max="100" step="10" value="0" name="mysqls" required>
+                        </li>
+                        <li>
+                            <label for="WebDesignS">Web Design</label>
+                            <input type="range" class="SkillI" min="0" max="100" step="10" value="0" name="webdesigns" required>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    const skill_open = document.getElementById("skillsOpenBlock"); 
+                    function skillsOpen(){
+                        skill_open.classList.remove("closed");
+                    }
+                </script>
+                <div class="textarea">
+                    <p>Tell us about you</p>
+                    <textarea style="resize:none; height: 100px; width: 95%; border-radius: 5px;"></textarea>
+                    <button type="submit" name="submiter" id="submiter">Submit</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <script>
+        const modal_open = document.getElementById("modal_background"); 
+        function contact(){
+            modal_open.classList.remove("closed");
+        }
+        function closer(){
+            modal_open.classList.add("closed")
+        }
+    </script> 
+    <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer>
+    </script>  -->
+</body>
+</html>
